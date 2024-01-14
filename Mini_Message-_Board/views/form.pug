@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+
+  // New Message Form
+  form(method="POST" action="/new")
+    label(for="author") Author:
+    input(type="text" name="author" required)
+    br
+    label(for="message") Message:
+    textarea(name="message" required)
+    br
+    // Button to Submit the Form
+    button(type="submit" class="submit-button") Create a New Message
+
+
+
+

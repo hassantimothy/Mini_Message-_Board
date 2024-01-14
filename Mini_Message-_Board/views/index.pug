@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  // Display Messages
+  each message in messages
+    p= message.text
+    p= `By: ${message.user}, Added: ${message.added}`
+
+  // Single Button for New Message Form
+  form(method="GET" action="/new")
+    button(type="submit") Create a New Message
+
